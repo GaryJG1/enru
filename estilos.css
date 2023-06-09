@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+:root {
+  --verde: #0c443a;
+  --limon: #25b1b2;
+  --degradado: linear-gradient(90deg, var(--limon), var(--verde));
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background: var(--limon);
+  color: white;
+}
+
+html {
+  font-size: 62.4%;
+  overflow-x: hidden;
+}
+
+body {
+  background: white;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  /**display: inline-block;**/
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background: var(--degradado);
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  /*agregado*/
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  text-align: center;
+  background: var(--verde);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--limon);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: var(--verde);
+}
+
+header .logo span {
+  color: var(--limon);
+}
+
+header .navbar a {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  color: var(--verde);
+}
+
+header .navbar a {
+  color: white; /*color letra menu*/
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  font-size: 3rem;
+  color: var(--verde);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/inalambrica.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*agregado posteriormente*/
+  width: 100%;
+  height: 600px;
+  background: hsla(169, 12%, 28%, 0.827);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    hsla(189, 10%, 27%, 0.905),
+    hsla(207, 7%, 53%, 0.888)
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+      to right,
+      rgba(109, 141, 149, 0.783),
+      hsla(189, 10%, 27%, 0.905)
+    ),
+    url(img/inalambrica.png);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.inicio .image img {
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.inicio .content h3 {
+  font-size: 5.5rem;
+  color: white;
+  text-transform: initial;
+  /**Diseño y Desarrollo Web Freelancer**/
+}
+
+.inicio .content h3 span {
+  color: var(--limon);
+  text-transform: uppercase;
+}
+
+.inicio .content p {
+  font-size: 1.7rem;
+  color: white;
+  padding: 1rem 0;
+  text-align: center; /**centrar El Coca-Orellana**/
+}
+.inicio .content .btn {
+  /**centrar El Coca-Orellana**/
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.detalles .caja-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.detalles .caja-contenedor .caja {
+  flex: 1 1 30rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: white;
+  /**border: 0.1rem solid rgba(0, 0, 0, 0.2);**/
+  /**box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);**/
+  margin: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+.detalles .caja-contenedor .caja img {
+  height: 15rem;
+}
+
+.detalles .caja-contenedor .caja h3 {
+  font-size: 2rem;
+  color: #25b1b2;
+  padding-top: 1rem;
+  text-transform: initial;
+}
+
+.detalles .caja-contenedor .caja p {
+  font-size: 1.3rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.detalles .caja-contenedor .caja h3 {
+}
+
+.acerca_de {
+  /**background: url(../img/fondo_2.png) no-repeat;**/
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+}
+
+.acerca_de .columna {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.acerca_de .columna .image {
+  flex: 1 1 40rem;
+}
+
+.acerca_de .columna .image img {
+  width: 100%;
+}
+
+.acerca_de .columna .content {
+  flex: 1 1 40rem;
+}
+
+.acerca_de .columna .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.acerca_de .columna .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.acerca_de .columna .content .bottons a:last-child {
+  margin-left: 2rem;
+}
+
+.opiniones .caja-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.opiniones .caja-contenedor .caja {
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem solid rgba(0, 0, 0, 0.1);
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+}
+
+.opiniones .caja-contenedor .caja .fa-atom {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 8rem;
+  color: var(--limon);
+  opacity: 0.3;
+}
+
+.opiniones .caja-contenedor .caja .user img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 2rem;
+}
+
+.opiniones .caja-contenedor .caja .user h3 {
+  color: var(--verde);
+  font-size: 2rem;
+}
+
+.opiniones .caja-contenedor .caja .user .stars i {
+  color: var(--verde);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.opiniones .caja-contenedor .caja .comentarios {
+  color: #666;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.contactos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+
+.contactos form {
+  flex: 1 1 40rem;
+  padding: 2rem 3rem;
+  border: 1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #666;
+}
+
+.contactos .heading {
+  text-align: center;
+  padding: 0;
+  padding-bottom: 2rem;
+  color: #ffc300;
+}
+
+.contactos form .inputcaja {
+  position: relative;
+}
+
+.contactos form .inputcaja input,
+.contactos form .inputcaja textarea {
+  width: 100%;
+  background: none;
+  color: white;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  text-transform: none;
+}
+
+.contactos form .inputcaja textarea {
+  resize: none;
+  height: 13rem;
+}
+
+.contactos form .inputcaja label {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  font-size: 1.7rem;
+  color: white;
+  transition: 0.2s linear;
+}
+
+.contactos form .inputcaja input:focus ~ label,
+.contactos form .inputcaja input:valid ~ label,
+.contactos form .inputcaja textarea:focus ~ label,
+.contactos form .inputcaja textarea:valid ~ label {
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: yellow;
+}
+
+.footer {
+  padding-top: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 990px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 990px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #25b1b2; /*color fondo menu deslizante responsive*/
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.2s linear;
+  }
+
+  header .navbar a {
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+
+  header input:checked ~ .navbar {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  header input:checked ~ label::before {
+    content: "\f00d";
+  }
+
+  .inicio {
+    flex-flow: column-reverse;
+  }
+
+  .inicio .image img {
+    width: 100%;
+  }
+
+  .inicio .content h3 {
+    font-size: 3.6rem;
+  }
+
+  .inicio .content p {
+    font-size: 1.5rem;
+  }
+
+  .acerca_de {
+    background-position: right;
+  }
+
+  .suscribete p {
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 49%;
+  }
+
+  .acerca_de .columna .content .bottons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .acerca_de .columna .content .bottons a {
+    margin: 1rem 0;
+  }
+}
